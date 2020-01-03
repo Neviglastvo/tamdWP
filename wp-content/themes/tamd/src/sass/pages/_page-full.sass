@@ -1,4 +1,7 @@
 .page-full
+	display: flex
+	flex-direction: column
+	align-items: center
 	width: 100%
 	max-width: 1920px
 	margin: 0 auto
@@ -9,6 +12,7 @@
 		flex-wrap: wrap
 		padding: 0 15px
 		position: relative
+		width: 100%
 		max-width: 1200px
 		margin: 0 auto
 		margin-bottom: 40px
@@ -119,7 +123,7 @@
 			text-align: center
 
 	&__subtitle
-		margin-bottom: 30px
+		margin-bottom: 20px
 		color: $black
 		font-size: 22px
 		line-height: 22px
@@ -136,11 +140,13 @@
 		margin-bottom: 10px
 
 	&__link
-		@extend .gradient-text
+		color: $accent
+		+h
+			@extend .gradient-text
 
 	&__social-container
-		margin-top: 40px
-		margin-bottom: 30px
+		margin-top: 20px
+		margin-bottom: 20px
 		display: flex
 		text-transform: uppercase
 		+h
@@ -161,11 +167,11 @@
 			margin-right: 0
 
 	&__social-icon
-		color: $black
+		color: $accent
 		font-size: 30px
 		+trs($globalAnimationSpeedFast)
 		+h
-			color: $accent
+			@extend .gradient-text
 
 
 	&__action

@@ -103,8 +103,8 @@ a{text-decoration:none}
 .map__container{position:absolute;top:0;left:0;width:100%;height:100%}
 .map__zoom-in{position:absolute;height:50px;width:50px;left:0;top:0;background-color:#1a1d1a}
 .map__zoom-out{position:absolute;height:50px;width:50px;left:60px;top:0;background-color:#1a1d1a}
-.page-full{width:100%;max-width:1920px;margin:0 auto;padding-bottom:50px}
-.page-full__container{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0 15px;position:relative;max-width:1200px;margin:0 auto;margin-bottom:40px}
+.page-full{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;max-width:1920px;margin:0 auto;padding-bottom:50px}
+.page-full__container{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0 15px;position:relative;width:100%;max-width:1200px;margin:0 auto;margin-bottom:40px}
 .page-full__container--timeline{padding-right:45px}
 .page-full__container-title{font-size:48px;line-height:48px;font-family:"Fira Sans Condensed",sans-serif;color:#fff;font-weight:700;text-align:center;margin:60px 0}
 .page-full__timeline{position:absolute;right:15px;height:100%;width:5px;border-radius:5px}
@@ -119,14 +119,14 @@ a{text-decoration:none}
 .page-full__avatar{position:absolute;top:0;left:0;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;-o-object-position:top center !important;object-position:top center !important}
 .page-full__box{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
 .page-full__title{color:#145c9e;margin-bottom:10px;font-size:36px;line-height:36px;font-weight:500;text-transform:uppercase}
-.page-full__subtitle{margin-bottom:30px;color:#1a1d1a;font-size:22px;line-height:22px;font-weight:500}
+.page-full__subtitle{margin-bottom:20px;color:#1a1d1a;font-size:22px;line-height:22px;font-weight:500}
 .page-full__info{font-size:18px;color:#1a1d1a;line-height:18px;margin-bottom:10px}
-.page-full__social-container{margin-top:40px;margin-bottom:30px;display:-webkit-box;display:-ms-flexbox;display:flex;text-transform:uppercase}
+.page-full__link{color:#145c9e}
+.page-full__social-container{margin-top:20px;margin-bottom:20px;display:-webkit-box;display:-ms-flexbox;display:flex;text-transform:uppercase}
 .page-full__social-container:hover{cursor:pointer;color:#145c9e}
 .page-full__social-item{height:30px;width:30px;border-radius:50%;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-right:14px}
 .page-full__social-item:last-child{margin-right:0}
-.page-full__social-icon{color:#1a1d1a;font-size:30px;-webkit-transition:300ms all ease;transition:300ms all ease}
-.page-full__social-icon:hover{color:#145c9e}
+.page-full__social-icon{color:#145c9e;font-size:30px;-webkit-transition:300ms all ease;transition:300ms all ease}
 .page-full__action{position:relative;margin:10px 0;height:30px;width:30px;min-width:30px}
 .page-full__action:hover{cursor:pointer}
 .page-full__action:after,.page-full__action:before{content:"";position:absolute;left:0;top:0;bottom:0;margin:auto 0;width:100%;height:4px;border-radius:3px;background-color:#145c9e;-webkit-transition:300ms all ease;transition:300ms all ease}
@@ -421,7 +421,7 @@ a{text-decoration:none}
 body{font-family:"Fira Sans Condensed",sans-serif}
 .slick-list{width:100%}
 .gradient,.page-full__timeline,.page-full__action:hover:after,.page-full__action:hover:before,.footer:before,.header2__logo-icon,.hero-grid__item:before,.hero .slick-dots li.slick-active,.hero__action:hover,.section-horizontal-slider .handle:hover,.section-horizontal-slider .handle.dragged,.section-horizontal-slider__item-title:after,.section-lectures__item-box::before,.btn:hover,.slider-control__item:hover,.post-card__top:after,.post-card__link:hover{background-color:#4158d0 !important;background-image:linear-gradient(43deg,#4158d0 0,#c850c0 46%,#ffcc70 100%) !important}
-.gradient-text,.page-full__container-title,.page-full__link,.page-full__action:hover,.header2__logo:hover .header2__logo-title,.header2__info:hover .header2__info-text,.header2__info:hover .header2__info-icon--large,.header2__info-item:hover,.header2__info-icon:hover,.hero-grid__item.slick-center .hero-grid__title,.hero .slider-arrow:hover,.hero__title,.section-grid__title--gradient,.section-horizontal-slider__item-link:hover,.section-lectures__item:hover .section-lectures__title,.section-lectures__social-item:hover i,.user-content__container a:hover,.mega-menu a:hover,.mega-menu .mega-menu-item-has-children ul li a:hover,.mega-menu .mega-current-menu-item>a,.post-card__title:hover{color:#4158d0 !important;background-image:linear-gradient(43deg,#4158d0 0,#c850c0 46%,#ffcc70 100%) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important}
+.gradient-text,.page-full__container-title,.page-full__link:hover,.page-full__social-icon:hover,.page-full__action:hover,.header2__logo:hover .header2__logo-title,.header2__info:hover .header2__info-text,.header2__info:hover .header2__info-icon--large,.header2__info-item:hover,.header2__info-icon:hover,.hero-grid__item.slick-center .hero-grid__title,.hero .slider-arrow:hover,.hero__title,.section-grid__title--gradient,.section-horizontal-slider__item-link:hover,.section-lectures__item:hover .section-lectures__title,.section-lectures__social-item:hover i,.user-content__container a:hover,.mega-menu a:hover,.mega-menu .mega-menu-item-has-children ul li a:hover,.mega-menu .mega-current-menu-item>a,.post-card__title:hover{color:#4158d0 !important;background-image:linear-gradient(43deg,#4158d0 0,#c850c0 46%,#ffcc70 100%) !important;-webkit-background-clip:text !important;-webkit-text-fill-color:transparent !important}
 .gradient-border{-o-border-image:linear-gradient(43deg,#4158d0 0,#c850c0 46%,#ffcc70 100%) !important;border-image:linear-gradient(43deg,#4158d0 0,#c850c0 46%,#ffcc70 100%) !important}
 .hero-page{min-height:300px;width:100%;padding:15px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;background-repeat:no-repeat;background-image:url("/img/hero/page.bg");background-size:cover;background-position:center center;background-color:rgba(26,29,26,0.6)}
 .hero-page__container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
