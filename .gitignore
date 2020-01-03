@@ -1,4 +1,3 @@
-# Numerous always-ignore extensions
 *.diff
 *.err
 *.orig
@@ -10,7 +9,6 @@
 *.vi
 *~
 
-# OS or Editor folders
 .DS_Store
 ._*
 Thumbs.db
@@ -24,9 +22,8 @@ nbproject
 *.sublime-workspace
 .idea
 
-# Folders to ignore
 .sass-cache
 .tmp
 _tmp
-node_modules
-bower_components
+wp-content/themes/tamd/node_modules
+wp-config.php
