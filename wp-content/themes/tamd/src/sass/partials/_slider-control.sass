@@ -1,0 +1,71 @@
+.slider-control
+	display: flex
+	justify-content: flex-start
+	margin-top: 35px
+	// padding: 0 15px
+	width: 100%
+	+r(1170)
+		justify-content: center
+	&--center
+		justify-content: center
+	&--end
+		justify-content: flex-end
+
+	&__container
+		display: flex
+		align-items: center
+
+	&__item
+		width: 50px
+		height: 50px
+		background-color: $accent
+		border-radius: 5px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 12px
+		position: relative
+		+trs
+		&:last-child
+			margin-right: 0
+		&:after, &:before
+			pointer-events: none
+			content: ""
+			position: absolute
+			width: 0px
+			height: 10px
+			border: 1px solid rgba(255, 255, 255, 0.35)
+			background-color: rgba(255, 255, 255, 0.35)
+			border-radius: 5px
+			+trs
+		&:after
+			top: 17px
+			+rotate(45)
+		&:before
+			bottom: 17px
+			+rotate(-45)
+		+h
+			cursor: pointer
+			@extend .gradient
+			&:after, &:before
+				border-color: #fff
+				background-color: #fff
+
+		&--accent
+			background-color: $accent
+			&:after, &:before
+				border-color: $accent
+			+h
+				&:after, &:before
+					border-color: $accent
+		&--prev
+
+		&--next
+			+rotate(180)
+
+		&.slick-disabled
+			opacity: 0.75
+			pointer-events: none
+			+trs
+
+	&__icon

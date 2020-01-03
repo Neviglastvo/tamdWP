@@ -1,0 +1,9 @@
+.hamburger
+	+burger(30px, 4px, $gutter: 5px, $color: #fff, $border-radius: 2px, $transition-duration: .3s)
+	margin-left: 30px
+	display: none !important
+	+r(1120)
+		display: block !important
+
+	&.active
+	    @include burger-to-cross

@@ -1,0 +1,101 @@
+.section-horizontal-slider
+	padding: 50px 15px
+	max-width: 1920px
+	width: 100%
+	overflow: hidden
+	margin: 0 auto
+	&--events
+		.section-horizontal-slider__item
+			&:first-child
+				margin-left: 80px
+				+r(768)
+					margin-left: 40px
+				+r(480)
+					margin-left: 20px
+				+r(375)
+					margin-left: 10px
+			&:last-child
+				margin-right: 0
+	&--news
+		// padding-right: 80px
+		padding-bottom: 100px
+		.section-horizontal-slider__item
+			text-align: right
+			&:first-child
+				margin-right: 110px
+				+r(768)
+					margin-right: 70px
+				+r(480)
+					margin-right: 40px
+				+r(375)
+					margin-right: 40px
+			&:last-child
+				margin-left: 0
+
+	.scrollbar
+		padding: 0
+
+	.handle
+		+h
+			@extend .gradient
+		&.dragged
+			@extend .gradient
+
+	&__container
+		width: 100%
+		overflow: visible !important
+
+	&__slider
+		width: 100%
+		display: flex
+		+h
+			cursor: move
+		&--news
+			flex-direction: row-reverse
+
+	&__item
+		display: flex
+		flex-direction: column
+		margin: 50px 0
+		margin-right: 40px
+		min-width: 290px
+		align-self: center
+
+		&--news
+			align-items: flex-end
+
+	&__item-title
+		width: 100%
+		color: $black
+		font-size: 28px
+		line-height: 40px
+		position: relative
+		padding-bottom: 12px
+		margin-bottom: 20px
+		&:after
+			content: ""
+			position: absolute
+			height: 3px
+			width: 100%
+			left: 0
+			bottom: -3px
+			background-color: $accent
+			@extend .gradient
+
+	&__item-text
+		font-family: $fr
+		color: $black
+		font-size: 16px
+		line-height: 20px
+		font-weight: 300
+
+
+	&__item-link
+		color: $accent
+		font-size: 18px
+		line-height: 18px
+		margin-top: 40px
+		+h
+			@extend .gradient-text
+
+

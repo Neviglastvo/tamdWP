@@ -1,0 +1,100 @@
+.page-contacts
+
+	&__container
+		position: relative
+		padding: 15px
+		height: calc(100vh - 140px)
+		min-height: 500px
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		+r(768)
+			padding: 0
+			height: auto
+			flex-direction: column-reverse
+			justify-content: center
+
+	&__box
+		display: flex
+		flex-direction: column
+		background-color: $black
+		color: $white
+		font-weight: 500
+		padding: 60px 40px
+		z-index: 1
+		min-width: 380px
+		+r(768)
+			align-items: center
+			min-width: auto
+			width: 100%
+			padding: 40px 15px
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-bottom: 20px
+		+r(768)
+			align-items: center
+		&:last-child
+			margin-bottom: 0
+
+
+	&__title
+		display: flex
+		align-items: center
+		margin-bottom: 5px
+		margin-right: 15px
+		font-weight: 700
+
+		i
+			text-align: center
+			color: $white
+			min-width: 20px
+			margin-right: 10px
+
+	&__link-container
+		display: flex
+		flex-direction: column
+
+	&__link
+		margin-left: 30px
+		color: $white
+		+tr(200ms)
+		+h
+			color: $accent
+		+r(768)
+			margin-left: 0
+
+	&__social-container
+
+	&__social-item
+
+.map
+	+coverdiv
+	+r(768)
+		position: relative
+		height: 400px
+		min-height: 400px
+
+	&__container
+		+coverdiv
+
+	&__zoom-in
+		position: absolute
+		height: 50px
+		width: 50px
+		left: 0
+		top: 0
+		background-color: $black
+
+	&__zoom-out
+		position: absolute
+		height: 50px
+		width: 50px
+		left: 60px
+		top: 0
+		background-color: $black
+
+	&__adress
+

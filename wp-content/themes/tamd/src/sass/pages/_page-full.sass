@@ -1,0 +1,207 @@
+.page-full
+	width: 100%
+	max-width: 1920px
+	margin: 0 auto
+	padding-bottom: 50px
+
+	&__container
+		display: flex
+		flex-wrap: wrap
+		padding: 0 15px
+		position: relative
+		max-width: 1200px
+		margin: 0 auto
+		margin-bottom: 40px
+		&--timeline
+			padding-right: 45px
+
+	&__container-title
+		font-size: 48px
+		line-height: 48px
+		font-family: $ff
+		color: $white
+		font-weight: 700
+		text-align: center
+		margin: 60px 0
+		@extend .gradient-text
+		+r(768)
+			font-size: 40px
+			line-height: 40px
+		+r(480)
+			font-size: 32px
+			line-height: 32px
+
+	&__timeline
+		@extend .gradient
+		position: absolute
+		right: 15px
+		height: 100%
+		width: 5px
+		border-radius: 5px
+
+	&__date
+		position: absolute
+		right: -15px
+		font-size: 18px
+		line-height: 18px
+		color: $accent
+		&:after
+			content: ''
+			position: absolute
+			right: -21px
+			top: 0
+			bottom: 0
+			height: 16px
+			width: 16px
+			border-radius: 50%
+			background-color: $accent
+
+		&--start
+			top: 0
+		&--end
+			position: absolute
+			bottom: -10px
+
+	&__item
+		position: relative
+		width: 100%
+		display: flex
+		flex-direction: column
+		margin-bottom: 40px
+		&:last-child
+			margin-bottom: 0
+
+	&__item-container
+		width: 100%
+		display: flex
+		+r(580)
+			flex-direction: column
+			align-items: center
+
+	&__avatar-container
+		width: 150px
+		min-width: 150px
+		height: 150px
+		border-radius: 50%
+		margin-right: 40px
+		overflow: hidden
+		position: relative
+		+r(580)
+			margin-right: 0
+			margin-bottom: 40px
+
+	&__avatar
+		+coverdiv
+		object-fit: cover
+		background-color: $black
+
+	&__box
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		+r(580)
+			width: 100%
+			align-items: center
+
+	&__title
+		color: $accent
+		margin-bottom: 10px
+		font-size: 36px
+		line-height: 36px
+		font-weight: 500
+		text-transform: uppercase
+		+r(768)
+			font-size: 30px
+			line-height: 30px
+		+r(480)
+			font-size: 24px
+			line-height: 24px
+			text-align: center
+
+	&__subtitle
+		margin-bottom: 30px
+		color: $black
+		font-size: 22px
+		line-height: 22px
+		font-weight: 500
+		+r(480)
+			font-size: 20px
+			line-height: 20px
+			text-align: center
+
+	&__info
+		font-size: 18px
+		color: $black
+		line-height: 18px
+		margin-bottom: 10px
+	&__link
+
+	&__social-container
+		margin-top: 40px
+		margin-bottom: 30px
+		display: flex
+		text-transform: uppercase
+		+h
+			cursor: pointer
+			color: $accent
+
+
+	&__social-item
+		height: 30px
+		width: 30px
+		border-radius: 50%
+		overflow: hidden
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 14px
+		&:last-child
+			margin-right: 0
+
+	&__social-icon
+		color: $black
+		font-size: 30px
+		+tr(300ms)
+		+h
+			color: $accent
+
+
+	&__action
+		position: relative
+		margin: 10px 0
+		height: 30px
+		width: 30px
+		min-width: 30px
+		+r(580)
+			margin: 10px auto
+		+h
+			cursor: pointer
+			@extend .gradient-text
+		&:after, &:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto 0
+			width: 100%
+			height: 4px
+			border-radius: 3px
+			background-color: $accent
+			+trs
+			+h
+				@extend .gradient
+
+		&:after
+			+rotate(90)
+		&.active
+			&:after
+				+rotate(0)
+
+
+
+	&__item-content
+		display: none
+		padding-left: 190px
+		+r(580)
+			padding-left: 0

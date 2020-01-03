@@ -1,0 +1,113 @@
+.section-lectures
+	padding: 60px 15px
+	&__container
+		display: flex
+		align-items: center
+		&--wrap
+			max-width: 1340px
+			margin: 0 auto
+			flex-wrap: wrap
+			.section-lectures__item-container
+				width: 100%
+				max-width: 25%
+				+r(1280)
+					max-width: 50%
+				+r(680)
+					max-width: 100%
+
+	&__item-container
+		min-height: 420px
+		padding: 20px 0
+		overflow: hidden
+		width: 100%
+		height: 100%
+		position: relative
+
+	&__item
+		@include materialShadow(2, 3, 10px)
+		margin: 0 auto
+		width: 100%
+		max-width: 320px
+		min-height: 380px
+		&:hover
+			.section-lectures__box
+				transform: translateY(0)
+			.section-lectures__title
+				@extend .gradient-text
+
+	&__item-box
+		+coverdiv
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+		overflow: hidden
+		border-radius: 10px
+
+	&__img-container
+		+coverdiv
+
+	&__img
+		+coverdiv
+		object-fit: cover
+		background-color: $accent
+
+	&__box
+		width: 100%
+		padding: 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		background-color: rgba($black, 0.85)
+		transform: translateY(85px)
+		z-index: 2
+		+tr(600ms)
+
+	&__title
+		font-size: 22px
+		color: $white
+		text-transform: uppercase
+		margin-bottom: 5px
+
+	&__subtitle
+		font-size: 18px
+		color: $white
+		text-align: center
+		margin-bottom: 30px
+
+	&__description
+		color: $white
+		margin-bottom: 25px
+
+	&__social
+		margin-bottom: 30px
+		width: 100%
+		display: flex
+		justify-content: center
+		position: relative
+
+	&__social-item
+		position: relative
+		width: 24px
+		height: 24px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 14px
+		+h
+			i
+				@extend .gradient-text
+		&:last-child
+			margin-right: 0
+		i
+			color: $white
+			font-size: 24px
+
+	&__action
+		margin-top: 60px
+		display: flex
+		justify-content: center
+
+	&__btn
+
+
+

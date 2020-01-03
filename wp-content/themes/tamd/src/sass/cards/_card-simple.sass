@@ -1,0 +1,61 @@
+.card-simple
+	min-width: 260px
+	width: 260px
+	height: 260px
+	position: relative
+	display: flex
+	align-items: flex-end
+	padding: 30px 27px
+	margin: 0 auto
+	border-radius: 20px
+	overflow: hidden
+	+h
+		.card-simple__img-container
+			filter: none
+			+scale(1.05)
+			&:before
+				background-color: rgba(0, 0, 0, 1)
+
+		.card-simple__title
+			@extend .gradient-text
+
+	&__img-container
+		pointer-events: none
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		border-radius: 20px
+		overflow: hidden
+		background-color: $black
+		+scale(1.4)
+		+blur(2px)
+		+trs
+		&:before
+			content: ""
+			pointer-events: none
+			+coverdiv
+			background-color: rgba(0, 0, 0, 0.75)
+			+trs
+
+	&__img
+		position: absolute
+		width: calc(100% + 2px)
+		height: calc(100% + 2px)
+		top: -1px
+		bottom: -1px
+		left: -1px
+		right: -3px
+		+coverimg
+		object-position: 0 0
+
+	&__title
+		z-index: 2
+		color: #fff
+		font-family: $ff
+		font-size: 18px
+		font-weight: 800
+		a
+			color: #FFF
+

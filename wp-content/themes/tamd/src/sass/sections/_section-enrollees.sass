@@ -1,0 +1,55 @@
+.section-enrollees
+	padding: 80px 15px
+	width: 100%
+	background-color: $black
+
+	&__container
+		display: flex !important
+		align-items: center
+
+	&__item-container
+		display: flex
+		justify-content: center
+		padding: 30px
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__box
+		display: flex
+		align-items: center
+		span
+			padding: 0 5px
+
+	&__img-container
+		min-width: 100px
+		width: 100px
+		height: 100px
+		position: relative
+		border-radius: 100%
+		overflow: hidden
+		margin-bottom: 30px
+
+	&__img
+		+coverdiv
+		background-color: $accent
+		object-fit: cover
+
+	&__year
+		text-align: center
+		color: #fff
+		font-size: 18px
+		text-align: center
+
+	&__title
+		text-align: center
+		color: $accent
+		font-size: 26px
+		margin-bottom: 10px
+
+	&__subtitle
+		text-align: center
+		font-size: 16px
+		color: #fff

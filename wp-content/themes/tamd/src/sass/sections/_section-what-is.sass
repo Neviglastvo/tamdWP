@@ -1,0 +1,26 @@
+.section-what-is
+	width: 100%
+	padding: 100px 15px
+	background-color: $black
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	&__container
+		// display: flex
+		// justify-content: space-around
+
+
+
+	.slider-arrow
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto 0
+		&--prev
+			left: 0px
+			+r(480)
+				left: -20px
+		&--next
+			right: 0px
+			+r(480)
+				right: -20px

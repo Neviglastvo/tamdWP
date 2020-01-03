@@ -1,0 +1,59 @@
+.grid-page
+	display: flex
+	flex-wrap: wrap
+	height: calc(100vh - 110px)
+
+	&--size-4
+		.grid-page__item
+			height: 50%
+
+	&--size-2
+		.grid-page__item
+			height: 100%
+
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 100%
+		max-width: 50%
+		flex: 50%
+		position: relative
+		+h
+			&:after
+				background-color: rgba(0, 0, 0, 0.5)
+			.grid4__img
+				+blur(0)
+				+scale(1)
+		&:after
+			content: ""
+			+coverdiv
+			background-color: rgba(0, 0, 0, 0.8)
+			+tr(1200ms)
+
+	&__img-container
+		+coverdiv
+		overflow: hidden
+		z-index: -1
+
+	&__img
+		+coverdiv
+		object-fit: cover
+		+blur(2px)
+		+scale(1.2)
+		+tr(900ms)
+
+	&__box
+		z-index: 1
+
+	&__title
+		font-size: 44px
+		color: $white
+		text-align: center
+
+	&__subtitle
+		text-align: center
+
+	&__donger
+		text-align: center
+

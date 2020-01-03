@@ -1,0 +1,86 @@
+@import "helpers/**/*.sass"
+@import "lib/*.sass"
+@import "generated/*.sass"
+@import "layout/*.sass"
+@import "pages/*.sass"
+@import "sections/*.sass"
+@import "partials/*.sass"
+@import "cards/*.sass"
+
+body
+	font-family: $ff
+
+// background-color: #4158D0
+// background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)
+
+.slick-list
+	width: 100%
+
+.gradient
+	background-color: #4158D0 !important
+	background-image: -webkit-linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%) !important
+	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%) !important
+
+
+.gradient-text
+	color: #4158D0 !important
+	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%) !important
+	-webkit-background-clip: text !important
+	-webkit-text-fill-color: transparent !important
+
+.gradient-border
+	border-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%) !important
+
+
+.hero-page
+	min-height: 300px
+	width: 100%
+	padding: 15px
+	display: flex
+	align-items: center
+	justify-content: center
+	background-repeat: no-repeat
+	background-image: url('/img/hero/page.bg')
+	background-size: cover
+	background-position: center center
+	background-color: rgba($black, 0.6)
+
+	&__container
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__title
+		color: $accent
+		font-size: 62px
+		line-height: 72px
+		text-align: center
+		font-family: $fr
+		font-weight: 700
+
+.content
+
+	&__container
+		padding: 40px 15px
+		display: flex
+		justify-content: center
+
+	&__content
+		max-width: 700px
+		display: flex
+		flex-direction: column
+		h1
+		h2
+		h3
+		h4
+		h5
+		h6
+		p
+			text-align: justify
+			padding: 20px 0
+		img
+
+		ul
+			padding: 20px 0
+			li
+

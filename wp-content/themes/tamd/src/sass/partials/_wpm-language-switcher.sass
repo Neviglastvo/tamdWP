@@ -1,0 +1,19 @@
+.wpm-language-switcher
+	display: flex
+	align-items: center
+	li
+		margin-right: 10px
+		opacity: 0.7
+		display: flex
+		+tr(300ms)
+		+h
+			opacity: 1
+		&.active
+			opacity: 1
+
+		a, span
+			display: flex
+	img
+		margin: 0 !important
+		width: 20px
+		height: 14px

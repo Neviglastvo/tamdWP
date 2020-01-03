@@ -1,0 +1,31 @@
+.grid
+	padding: 60px 15px
+	max-width: 1920px
+	margin: 0 auto
+	&__container
+		display: flex
+		flex-wrap: wrap
+		margin: -15px
+
+	&__item
+		display: flex
+		justify-content: center
+		max-width: calc(100%/4)
+		flex: calc(100%/4)
+		padding: 15px
+		+r(1600)
+			max-width: calc(100%/3)
+			flex: calc(100%/3)
+		+r(1200)
+			max-width: 50%
+			flex: 50%
+		+r(768)
+			max-width: 100%
+			flex: 100%
+
+	&__action
+		margin-top: 60px
+		display: flex
+		justify-content: center
+
+	&__btn
