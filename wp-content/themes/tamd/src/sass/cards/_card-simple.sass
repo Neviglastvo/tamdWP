@@ -5,19 +5,24 @@
 	position: relative
 	display: flex
 	align-items: flex-end
-	padding: 30px 27px
 	margin: 0 auto
 	border-radius: 20px
 	overflow: hidden
+	+tr
 	+h
+		+scale(1.1)
 		.card-simple__img-container
 			filter: none
 			+scale(1.05)
-			&:before
+			opacity: 0.3
+			+before
 				background-color: rgba(0, 0, 0, 1)
 
 		.card-simple__title
-			@extend .gradient-text
+			// @extend .gradient-text
+			text-shadow: none
+
+
 
 	&__img-container
 		pointer-events: none
@@ -25,18 +30,17 @@
 		top: 0
 		bottom: 0
 		left: 0
+		opacity: 0.5
 		right: 0
 		border-radius: 20px
 		overflow: hidden
 		background-color: $black
 		+scale(1.4)
-		+blur(2px)
+		+blurFilter(3)
 		+trs
-		&:before
-			content: ""
+		+before
 			pointer-events: none
-			+coverdiv
-			background-color: rgba(0, 0, 0, 0.75)
+			+cover
 			+trs
 
 	&__img
@@ -48,14 +52,17 @@
 		left: -1px
 		right: -3px
 		+coverimg
-		object-position: 0 0
 
 	&__title
+		width: 100%
 		z-index: 2
 		color: #fff
+		padding: 30px 27px
 		font-family: $ff
-		font-size: 18px
+		font-size: 20px
 		font-weight: 800
+		text-shadow: 0 0 4px #000
+		+tr
 		a
 			color: #FFF
 

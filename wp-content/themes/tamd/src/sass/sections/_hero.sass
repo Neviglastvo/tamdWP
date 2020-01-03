@@ -65,7 +65,7 @@
 
 
 	&__container
-		+coverdiv
+		+cover
 		display: flex !important
 		align-items: center
 		height: 100vh
@@ -94,17 +94,17 @@
 		align-items: center
 
 	&__bg-container
-		+coverdiv
+		+cover
 		background-color: $accent
 		z-index: -1
 		pointer-events: none
 		&:after
 			content: ""
-			+coverdiv
+			+cover
 			background-color: rgba(0, 0, 0, 0.75)
 
 	&__bg
-		+coverdiv
+		+cover
 		object-fit: cover
 		font-family: 'object-fit: cover;'
 

@@ -35,6 +35,7 @@ const gulp = require( 'gulp' ); // Gulp of-course.
 
 // CSS related plugins.
 const sass = require( 'gulp-sass' ); // Gulp plugin for Sass compilation.
+const sassGlob = require( 'gulp-sass-glob' ); // Gulp plugin for Sass whole folders import.
 const minifycss = require( 'gulp-uglifycss' ); // Minifies CSS files.
 const autoprefixer = require( 'gulp-autoprefixer' ); // Autoprefixing magic.
 const mmq = require( 'gulp-merge-media-queries' ); // Combine matching media queries into one.
@@ -117,6 +118,7 @@ gulp.task( 'styles', () => {
 		.src( config.styleSRC, { allowEmpty: true })
 		.pipe( plumber( errorHandler ) )
 		.pipe( sourcemaps.init() )
+		.pipe(sassGlob())
 		.pipe(
 			sass({
 				errLogToConsole: config.errLogToConsole,
@@ -163,6 +165,7 @@ gulp.task( 'stylesRTL', () => {
 		.src( config.styleSRC, { allowEmpty: true })
 		.pipe( plumber( errorHandler ) )
 		.pipe( sourcemaps.init() )
+		.pipe(sassGlob())
 		.pipe(
 			sass({
 				errLogToConsole: config.errLogToConsole,

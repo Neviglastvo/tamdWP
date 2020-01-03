@@ -15,16 +15,8 @@
 				+r(680)
 					max-width: 100%
 
-	&__item-container
-		min-height: 420px
-		padding: 20px 0
-		overflow: hidden
-		width: 100%
-		height: 100%
-		position: relative
-
 	&__item
-		@include materialShadow(2, 3, 10px)
+		padding-top: 25%
 		margin: 0 auto
 		width: 100%
 		max-width: 320px
@@ -36,20 +28,31 @@
 				@extend .gradient-text
 
 	&__item-box
-		+coverdiv
+		background-color: #FFF
 		display: flex
 		flex-direction: column
-		justify-content: flex-end
-		overflow: hidden
-		border-radius: 10px
+		align-items: center
+		min-height: 245px
+		+materialShadow(2,3)
+		+before
+			+cover
+			z-index: -1
+			+scale(1.02)
+			@extend .gradient
 
 	&__img-container
-		+coverdiv
+		width: 100%
+		+aspectRatio(1,1)
+		width: 50%
+		border-radius: 50%
+		overflow: hidden
+		margin-top: -25%
+		margin-bottom: 40px
 
 	&__img
-		+coverdiv
-		object-fit: cover
-		background-color: $accent
+		+cover
+		+coverimg
+		object-position: top center !important
 
 	&__box
 		width: 100%
@@ -57,29 +60,30 @@
 		display: flex
 		flex-direction: column
 		align-items: center
-		background-color: rgba($black, 0.85)
-		transform: translateY(85px)
 		z-index: 2
-		+tr(600ms)
+		+trs(600)
 
 	&__title
-		font-size: 22px
-		color: $white
-		text-transform: uppercase
+		width: 100%
 		margin-bottom: 5px
+		font-size: 20px
+		padding: 0 10px
+		color: $black
+		text-align: center
+		font-weight: 700
+		+ls(-50)
 
 	&__subtitle
-		font-size: 18px
-		color: $white
+		padding: 0 10px
+		font-size: 16px
+		color: $black
 		text-align: center
-		margin-bottom: 30px
 
 	&__description
-		color: $white
+		color: $black
 		margin-bottom: 25px
 
 	&__social
-		margin-bottom: 30px
 		width: 100%
 		display: flex
 		justify-content: center
@@ -99,7 +103,7 @@
 		&:last-child
 			margin-right: 0
 		i
-			color: $white
+			color: $black
 			font-size: 24px
 
 	&__action

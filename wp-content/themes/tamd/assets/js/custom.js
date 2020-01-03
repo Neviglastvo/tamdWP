@@ -283,10 +283,9 @@ function slider3items(element) {
   var thisSlider = element;
   var thisSliderArrows = thisSlider.next('.js-slider-control');
   var slidesmustShow = 3;
-  var slidesCount = $('.js-slider-reviews .js-slider-reviews-item');
-  var sliderLenght = slidesCount.length;
+  var sliderLenght = element.length;
 
-  if (thisSlider.length && sliderLenght > 3) {
+  if (thisSlider.length && thisSlider.not('.slick-initialized')) {
     thisSlider.slick({
       dots: false,
       infinite: false,

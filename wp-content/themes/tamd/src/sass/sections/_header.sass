@@ -51,7 +51,7 @@ $hh: 80px
 		@extend .gradient
 		+trs
 		img
-			+coverdiv
+			+cover
 			+coverimg
 			+scale(1.2)
 
@@ -93,7 +93,7 @@ $hh: 80px
 				flex-direction: column
 				justify-content: center
 				align-items: center
-				+coverdiv
+				+cover
 
 				> li
 					display: flex
@@ -122,7 +122,7 @@ $hh: 80px
 						margin: 0
 						background-color: transparent !important
 						// pointer-events: none !important
-						+tr(0)
+						+trs(0)
 						&.active
 							display: flex
 							height: auto
@@ -257,7 +257,7 @@ $hh: 80px
 					overflow: hidden
 					position: relative
 					img
-						+coverdiv
+						+cover
 						+coverimg
 			.language-dropdown
 				position: absolute
@@ -277,9 +277,9 @@ $hh: 80px
 					overflow: hidden
 					position: relative
 					a
-						+coverdiv
+						+cover
 						img
-							+coverdiv
+							+cover
 							+coverimg
 	.hamburger
 		z-index: 1000

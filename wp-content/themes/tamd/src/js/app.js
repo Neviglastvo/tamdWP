@@ -323,11 +323,10 @@ function slider3items(element) {
   let thisSliderArrows = thisSlider.next('.js-slider-control');
 
   let slidesmustShow = 3;
-  let slidesCount = $('.js-slider-reviews .js-slider-reviews-item');
 
-  let sliderLenght = slidesCount.length;
+  let sliderLenght = element.length;
 
-  if( thisSlider.length && sliderLenght > 3) {
+  if(thisSlider.length && thisSlider.not('.slick-initialized')) {
     thisSlider.slick({
       dots: false,
       infinite: false,

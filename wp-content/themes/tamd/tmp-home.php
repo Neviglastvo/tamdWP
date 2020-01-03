@@ -55,7 +55,7 @@ get_header();
 		</div>
 	</section>
 
-	<section class="section-grid">
+	<section class="section-grid js-nav-trigger">
 		<div class="section-grid__container">
 
 			<div class="section-grid__title"><?php the_field('home-what-is-mechanic__title'); ?></div>
@@ -339,7 +339,7 @@ get_header();
 
 			<div class="section-grid__title"><?php the_field('teacher-block-title'); ?></div>
 
-			<div class="section-grid__list section-grid__list--slider  js-slider-lectures">
+			<div class="section-grid__list section-grid__list--slider js-slider-lectures">
 
 				<?php if( have_rows('teacher-repeater') ): ?>
 					<?php while( have_rows('teacher-repeater') ): the_row(); ?>
@@ -349,12 +349,15 @@ get_header();
 							<div class="section-lectures__item">
 								<div class="section-lectures__item-box">
 
+
 									<div class="section-lectures__img-container">
 										<img src="<?php the_sub_field('teacher-avatar'); ?>" alt="" class="section-lectures__img">
 									</div>
+
+									<div class="section-lectures__title"><?php the_sub_field('teacher-name'); ?></div>
+									<div class="section-lectures__subtitle"><?php the_sub_field('teacher-post'); ?></div>
+
 									<div class="section-lectures__box">
-										<div class="section-lectures__title"><?php the_sub_field('teacher-name'); ?></div>
-										<div class="section-lectures__subtitle"><?php the_sub_field('teacher-post'); ?></div>
 										<div class="section-lectures__social">
 
 											<?php if( have_rows('teacher-mail-repeater') ): ?>
@@ -396,7 +399,7 @@ get_header();
 			</div>
 
 			<div class="section-grid__action">
-				<a href="<?php the_field('famous-block__action-link'); ?>" class="btn"><?php the_field('famous-block__action-text'); ?></a>
+				<a href="<?php the_field('teacher-block__action-link'); ?>" class="btn"><?php the_field('teacher-block__action-text'); ?></a>
 			</div>
 
 		</div>

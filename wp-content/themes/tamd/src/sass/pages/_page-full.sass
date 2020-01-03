@@ -91,9 +91,9 @@
 			margin-bottom: 40px
 
 	&__avatar
-		+coverdiv
+		+cover
 		object-fit: cover
-		background-color: $black
+		object-position: top center !important
 
 	&__box
 		display: flex
@@ -134,7 +134,9 @@
 		color: $black
 		line-height: 18px
 		margin-bottom: 10px
+
 	&__link
+		@extend .gradient-text
 
 	&__social-container
 		margin-top: 40px
@@ -161,7 +163,7 @@
 	&__social-icon
 		color: $black
 		font-size: 30px
-		+tr(300ms)
+		+trs($globalAnimationSpeedFast)
 		+h
 			color: $accent
 
